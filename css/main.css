@@ -1,1 +1,116 @@
 @charset "utf-8";
+
+/**
+ * 1. Positioning         (position, right, top, z-index, ...)
+ * 2. Display & Box Model (border, box-sizing, display, height, margin, overflow, padding, width, ...)
+ * 3. Color               (background, color, ...)
+ * 4. Text                (font, line-height, text-align, ...)
+ * 5. Other               (cursor, ...)
+ */
+
+@font-face {
+  font-family: 'Latin Modern Roman';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://dl.dropboxusercontent.com/u/68399045/lmroman10-regular-webfont.eot');
+  src: url('https://dl.dropboxusercontent.com/u/68399045/lmroman10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('https://dl.dropboxusercontent.com/u/68399045/lmroman10-regular-webfont.woff') format('woff'),
+  url('https://dl.dropboxusercontent.com/u/68399045/lmroman10-regular-webfont.ttf') format('truetype'),
+  url('https://dl.dropboxusercontent.com/u/68399045/lmroman10-regular-webfont.svg#latin_modern_roman10_regular') format('svg');
+}
+
+/* See http://www.paulirish.com/2012/box-sizing-border-box-ftw; apply a natural box layout model to all elements */
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* See http://camendesign.com/code/developpeurs_sans_frontieres to style html, body and limit page wrappers! */
+html { height: 100%; overflow: auto; background: #fff; color: #505050; }
+
+body {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1600px;
+  min-height: 100%;
+  overflow: auto;
+  padding: 0 15px;
+  font: 62.5% "Latin Modern Roman", "Times New Roman", serif;
+  text-shadow: 0 0 1px rgba(16, 16, 16, 0.1);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 1px rgba(16, 16, 16, 0.1);
+  zoom: 1;
+}
+
+a { outline: none; color: #6db33f /* #002d36 | 0, 45, 54 */; text-decoration: none; }
+
+a:hover { color: #88f /* #888 */; }
+
+h1, h2 {
+  margin: 0 auto;
+  font-weight: normal;
+  letter-spacing: 0.5em;
+  text-align: center;
+}
+
+h1 {
+  color: #111 /* #34302d */;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
+[role=banner] h2 {
+  color: #888;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+nav {
+  margin: 1.4rem auto;
+  color: #111;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav ul { margin: 0.4rem auto; padding: 0 0; }
+
+nav ul li { display: inline-block; }
+
+[role=banner] { margin-top: 2%; }
+
+[role=contentinfo] {
+  color: #888;
+  font-size: 1.1em;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+[role=contentinfo] a:hover { color: #88f /*#111*/; }
+
+#game {
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 0 #fff, 2px 2px 0 #ccc;
+  display: block;
+  margin: 0 auto;
+}
+
+/* *** CUSTOM: *** */
+
+/* *** CUSTOM. *** */
+
+/* ----------------- */
+/* Utilities (IE9+): */
+/* ----------------- */
+
+.csv li { display: inline-block; }
+
+.csv li:before { content: " / "; /* separator */ }
+
+.csv li:first-child:before { content: ""; }
+
+/* Browse Happy prompt: */
+
+.browsehappy { display: none; margin: 0.2rem; padding: 0.2rem; background: #ccc; color: #505050; }
+
+.ie9 .browsehappy { display: block; }
