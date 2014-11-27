@@ -1,0 +1,10 @@
+{
+  "name": "Koken Thang",
+  "version": "0.1",
+  "description": "Template to kick-start one's [Koken](http://koken.me/) themes.",
+  "demo": "http://github.com/octavian-nita/koken-thang",
+  "author": {
+    "name": "Octavian Nita",
+    "link": "http://github.com/octavian-nita"
+  }
+}

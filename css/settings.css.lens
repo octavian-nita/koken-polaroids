@@ -36,6 +36,7 @@ body {
   text-shadow: 0 0 1px rgba(16, 16, 16, 0.1);
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-stroke: 1px rgba(16, 16, 16, 0.1);
+  /* -webkit-text-stroke: 1px rgba(64, 64, 64, 0.2); */
   zoom: 1;
 }
 
@@ -88,14 +89,42 @@ nav ul li { display: inline-block; }
 
 [role=contentinfo] a:hover { color: #88f /*#111*/; }
 
-#game {
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 0 #fff, 2px 2px 0 #ccc;
-  display: block;
-  margin: 0 auto;
+/* *** CUSTOM: *** */
+
+.grid { text-align: center; }
+
+.polaroid {
+  position: relative;
+  display: inline-block;
+  height: 300px;
+  width: 260px;
+  background: transparent url("https://dl.dropboxusercontent.com/u/68399045/polaroids.jpg") center center no-repeat;
+  overflow: hidden;
+  list-style: none;
+  font-size: 1.4em;
 }
 
-/* *** CUSTOM: *** */
+.polaroid img {
+  position: relative;
+  display: block;
+  left: 39px;
+  top: 34px;
+}
+
+.polaroid h2 {
+  position: relative;
+  top: 1.5em;
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.polaroid p {
+  position: absolute;
+  bottom: 1.2em;
+  right: 2.1em;
+  font: 1.5em monospace;
+}
 
 /* *** CUSTOM. *** */
 
